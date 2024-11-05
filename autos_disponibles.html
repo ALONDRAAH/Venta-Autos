@@ -9,9 +9,28 @@
   <body>
     <header>
       <img src="img/logo.jpeg" alt="Logotipo de la Página" class="logo" />
-      <nav>
+      <nav class="navegacion">
         <ul>
-          <li><a href="index.html">Inicio</a></li>
+          <li>
+            <a
+              class="navegacion__enlace navegacion__enlace--activo"
+              href="index.html"
+              >Inicio</a
+            >
+          </li>
+          <li>
+            <a class="navegacion__enlace" href="autos_disponibles.html"
+              >Autos Disponibles</a
+            >
+          </li>
+          <li>
+            <a class="navegacion__enlace" href="sobre-nosotros.html"
+              >Sobre Nosotros</a
+            >
+          </li>
+          <li>
+            <a class="navegacion__enlace" href="contactanos.html">Contactos</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -23,9 +42,12 @@
             <figure>
               <img src="img/auto1.jpeg" alt="Auto Modelo 1" />
               <figcaption>
-                <h3>Modelo 1</h3>
-                <p>Precio: $10,000</p>
-                <p>Descripción breve del auto.</p>
+                <h3>Modelo Toyota 2008</h3>
+                <p>Precio:₡6.000,000</p>
+                <p>
+                  En exelectes condiciones con Dekra al día, con papeles,
+                  traspaso incluido en el precio..
+                </p>
                 <button>Más Información</button>
               </figcaption>
             </figure>
@@ -34,9 +56,12 @@
             <figure>
               <img src="img/auto2.jpeg" alt="Auto Modelo 2" />
               <figcaption>
-                <h3>Modelo 2</h3>
-                <p>Precio: $12,000</p>
-                <p>Descripción breve del auto.</p>
+                <h3>Modelo Hyundai 2006</h3>
+                <p>Precio: ₡2.500,000</p>
+                <p>
+                  Le funciona todo, 13 pasajeros, esta al día y tiene papeles,
+                  detalles de pintura por eso el precio.
+                </p>
                 <button>Más Información</button>
               </figcaption>
             </figure>
@@ -45,9 +70,12 @@
             <figure>
               <img src="img/auto3.jpeg" alt="Auto Modelo 2" />
               <figcaption>
-                <h3>Modelo 2</h3>
-                <p>Precio: $12,000</p>
-                <p>Descripción breve del auto.</p>
+                <h3>Modelo Nissan 2007</h3>
+                <p>Precio: ₡3.000,000</p>
+                <p>
+                  El auto esta excelente, al día, se vende por falta de uso,
+                  solo gente seria
+                </p>
                 <button>Más Información</button>
               </figcaption>
             </figure>
@@ -56,9 +84,9 @@
             <figure>
               <img src="img/auto4.jpeg" alt="Auto Modelo 2" />
               <figcaption>
-                <h3>Modelo 2</h3>
-                <p>Precio: $12,000</p>
-                <p>Descripción breve del auto.</p>
+                <h3>Tracker 2004</h3>
+                <p>Precio: ₡3.500,000</p>
+                <p>solo se vende, esta al día, precio negociable.</p>
                 <button>Más Información</button>
               </figcaption>
             </figure>
@@ -67,9 +95,9 @@
             <figure>
               <img src="img/auto5.jpeg" alt="Auto Modelo 2" />
               <figcaption>
-                <h3>Modelo 2</h3>
-                <p>Precio: $12,000</p>
-                <p>Descripción breve del auto.</p>
+                <h3>Hyundi 2011</h3>
+                <p>Precio: ₡5.000,000</p>
+                <p>Nada que hacerle,7 pasajeros, firma de una.</p>
                 <button>Más Información</button>
               </figcaption>
             </figure>
@@ -78,9 +106,12 @@
             <figure>
               <img src="img/auto6.jpeg" alt="Auto Modelo 2" />
               <figcaption>
-                <h3>Modelo 2</h3>
-                <p>Precio: $12,000</p>
-                <p>Descripción breve del auto.</p>
+                <h3>kia 2010</h3>
+                <p>Precio: ₡1.950,000</p>
+                <p>
+                  Esta al 100%, 5 pasajeros, solo detalles de pintura en la
+                  parte delantera.
+                </p>
                 <button>Más Información</button>
               </figcaption>
             </figure>
@@ -90,11 +121,42 @@
 
       <section id="testimonios">
         <h2>Testimonios</h2>
-        <ul class="testimonios-list">
-          <li>"Excelente servicio y muy buenos autos!" - Cliente 1</li>
-          <li>"Estoy muy satisfecho con mi compra." - Cliente 2</li>
-        </ul>
+        <div class="testimonios-container">
+          <div class="testimonio">
+            <p class="comentario">"Excelente servicio y muy buenos autos!"</p>
+            <p class="autor">- Carlos D</p>
+          </div>
+          <div class="testimonio">
+            <p class="comentario">
+              "Estoy muy satisfecho con mi compra. ¡Recomiendo totalmente!"
+            </p>
+            <p class="autor">- Elaine C</p>
+          </div>
+          <div class="testimonio">
+            <p class="comentario">
+              "El proceso fue rápido y sencillo. ¡Me encanta mi nuevo auto!"
+            </p>
+            <p class="autor">- Adelia A</p>
+          </div>
+          <div class="testimonio">
+            <p class="comentario">
+              "Un trato muy amable y autos en excelente estado. ¡Volveré a
+              comprar!"
+            </p>
+            <p class="autor">- Victor G</p>
+          </div>
+          <div class="testimonio">
+            <p class="comentario">
+              "Gran variedad de autos y a buen precio. Me sentí muy apoyado
+              durante todo el proceso."
+            </p>
+            <p class="autor">- Daniel M</p>
+          </div>
+        </div>
       </section>
     </main>
+    <footer>
+      <div>Todos los derechos reservados Alomah</div>
+    </footer>
   </body>
 </html>

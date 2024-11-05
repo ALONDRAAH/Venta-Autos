@@ -1,12 +1,10 @@
 :root {
-  --primary-color: #007BFF;
+  --primary-color: #007bff;
   --secondary-color: #6c757d;
   --background-color: #f8f9fa;
-  --text-color: #343a40;
-  --font-primary: 'Arial', sans-serif;
-  --font-secondary: 'Georgia', serif;
-
-
+  --text-color: #010509;
+  --font-primary: "Bebas Neue", sans-serif;
+  --font-secondary: "Cinzel", serif;
 }
 
 body {
@@ -17,28 +15,140 @@ body {
 }
 
 header {
+  position: relative;  /* Para posicionar el carrito respecto a este contenedor */
   background-color: var(--primary-color);
-  color: white;
-  padding: 20px;
+  color: black;
+  font-weight: bold; /* Poner el texto en negrita */
+  font-size: 2.5rem;
+  padding: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-nav ul {
+header .logo {
+  width: 30rem;
+  height: 10rem;
+}
+
+header nav {
+  display: flex; 
+  align-items: center; 
+  padding: 0; 
+}
+
+header nav ul {
   list-style: none;
-  display: flex;
-  gap: 15px;
+  margin: 0; 
+  padding: 0; 
+  display: flex; 
+  gap: 2rem; 
 }
 
-nav a {
+header nav a {
+  color: var(--text-color);
+  text-decoration: none; 
+  font-weight: bold; 
+  font-size: 2.5rem; 
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: rgb(171, 203, 236); 
+}
+
+header nav .navegacion__enlace--activo {
   color: white;
-  text-decoration: none;
 }
 
-main {
-  padding: 20px;
+
+.carrito-container {
+  position: absolute;  /* Posicionamos el carrito de forma absoluta */
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;  /* Inicia en la izquierda */
+  align-items: center;
+  z-index: 1;  /* Aseguramos que el carrito esté por encima del contenido */
 }
+
+.carrito {
+  width: 3rem; 
+  height: auto;
+  animation: moverCarrito 15s linear infinite; /* Aplicamos la animación */
+}
+
+@keyframes moverCarrito {
+  0% {
+    transform: translateX(-100px); /* Empieza fuera de la pantalla a la izquierda */
+  }
+  50% {
+    transform: translateX(100vw); /* Se mueve hasta el final de la pantalla (derecha) */
+  }
+  100% {
+    transform: translateX(-100px); /* Vuelve a empezar desde la izquierda */
+  }
+}
+
+.navegacion {
+  background-color: var(--primary-color);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.navegacion__enlace {
+  font-family: var(--font-primary);
+  color: var(--secondary-color);
+  font-size: 1rem;
+}
+
+.navegacion__enlace--activo,
+.navegacion__enlace:hover {
+  color: white;
+}
+
+
+.main-principal {
+  padding: 20px;
+  display: grid; 
+  gap: 20px;     
+  grid-template-columns: 1fr 1fr;
+}
+
+.main-principal p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .main-principal {
+    grid-template-columns: 1fr; 
+  }
+}
+
+
+
+.footer {
+  background-color: rgb(170, 166, 161);
+  padding: 1rem;
+  width: 100%; 
+  position: relative; 
+  text-align: center;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  height: 1rem; 
+}
+
+.footer p {
+  margin: 0;
+  font-size: 5rem; 
+}
+
 
 .autos-grid {
   display: grid;
@@ -48,10 +158,11 @@ main {
 
 .auto-card {
   background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 2rem;
+  box-shadow: 0 1rem 1rem rgba(38, 15, 15, 0.882);
   overflow: hidden;
   transition: transform 0.2s;
+  
 }
 
 .auto-card:hover {
@@ -77,16 +188,16 @@ footer .map {
 
 @media (max-width: 768px) {
   header {
-      flex-direction: column;
-      align-items: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
   }
   nav ul {
-      flex-direction: column;
-      align-items: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
-.contact-info{
+.contact-info {
   background-color: var(--secondary-color);
   color: white;
   padding: 20px;
@@ -94,7 +205,13 @@ footer .map {
   flex-direction: column;
   align-items: center;
 }
-.social-media{
+.social-media {
+  background-color: rgb(212, 215, 214);
+  color: white;
+  padding: 20px;
+}
+
+.map {
   background-color: var(--secondary-color);
   color: white;
   padding: 20px;
@@ -103,11 +220,95 @@ footer .map {
   align-items: center;
 }
 
-.map{
-  background-color: var(--secondary-color);
+.parrafo{
+  font-family: var(--font-primary);
+}
+.redes-sociales{
+  align-items: center;
+}
+
+.redes-sociales {
+  background-color: var(--text-color);
+  padding: 1rem;
+  text-align: center; 
+}
+
+.redes-sociales a {
+  color: white; 
+  font-size: 1.2rem;
+  text-decoration: none;/
+  margin: 0 1rem; 
+  font-weight: bold;
+  transition: color 0.3s ease; 
+}
+
+.redes-sociales a:hover {
+  color: rgb(171, 203, 236);
+}
+
+@media (max-width: 768px) {
+  .redes-sociales {
+    text-align: left; 
+  }
+
+  .redes-sociales a {
+    display: block;
+    margin-bottom: 1rem;
+  }
+}
+
+#testimonios {
+  background-color: var(--secondary-color); 
   color: white;
-  padding: 20px;
+  padding: 2rem;
+  text-align: center; 
+}
+
+#testimonios h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem; 
+}
+
+.testimonios-container {
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem; 
+}
+
+.testimonio {
+  background-color: #1c282e; 
+  border-radius: 1rem; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  padding: 2rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+}
+
+.testimonio .comentario {
+  font-size: 1.2rem;
+  font-style: italic; 
+  margin-bottom: 1rem; 
+}
+
+.testimonio .autor {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--primary-color); 
+}
+
+@media (max-width: 768px) {
+  #testimonios h2 {
+    font-size: 2rem; 
+  }
+
+  .testimonio {
+    padding: 1.5rem; 
+  }
+
+  .testimonio .comentario {
+    font-size: 1rem; 
+  }
 }

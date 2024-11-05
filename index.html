@@ -5,40 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Venta de Autos Usados</title>
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel:wght@400..900&family=Mountains+of+Christmas:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mountains+of+Christmas:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
       <img src="img/logo.jpeg" alt="Logotipo de la Página" class="logo" />
-      <nav>
+
+      <!-- Carrito animado -->
+      <div class="carrito-container">
+        <img src="img/carrito.jpeg" alt="Carrito" class="carrito" />
+      </div>
+
+      <nav class="navegacion">
         <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="autos_disponibles.html">Autos Disponibles</a></li>
-          <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
-          <li><a href="contactanos.html">Contactos</a></li>
+          <li>
+            <a
+              class="navegacion__enlace navegacion__enlace--activo"
+              href="index.html"
+              >Inicio</a
+            >
+          </li>
+          <li>
+            <a class="navegacion__enlace" href="autos_disponibles.html"
+              >Autos Disponibles</a
+            >
+          </li>
+          <li>
+            <a class="navegacion__enlace" href="sobre-nosotros.html"
+              >Sobre Nosotros</a
+            >
+          </li>
+          <li>
+            <a class="navegacion__enlace" href="contactanos.html">Contactos</a>
+          </li>
         </ul>
       </nav>
     </header>
-    <main>
+    <main class="main-principal">
       <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam
-        beatae, repellat reprehenderit ad, accusamus qui quo nemo similique vel
-        quas dolores animi rerum temporibus? Aspernatur blanditiis eligendi
-        magnam aperiam dolorum!
+        En nuestra plataforma, ofrecemos una amplia selección de autos usados de
+        calidad, inspeccionados y listos para ser parte de tu vida diaria.
+        Sabemos que la compra de un vehículo es una decisión importante, y por
+        eso nos aseguramos de que todos nuestros autos cumplan con rigurosos
+        estándares de calidad y seguridad. Ya sea que busques tu primer coche o
+        quieras actualizar el que ya tienes, aquí encontrarás una variedad de
+        modelos, marcas y precios que se adaptan a tus necesidades y
+        presupuesto. ¡Encuentra el auto perfecto para ti hoy mismo!
       </p>
 
       <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam
-        beatae, repellat reprehenderit ad, accusamus qui quo nemo similique vel
-        quas dolores animi rerum temporibus? Aspernatur blanditiis eligendi
-        magnam aperiam dolorum!
+        Comprar un auto usado tiene muchos beneficios que no solo se traducen en
+        ahorros inmediatos, sino también en una excelente inversión a largo
+        plazo. Nuestros vehículos son cuidadosamente seleccionados, y contamos
+        con un historial completo de cada uno, para que tengas la tranquilidad
+        de que lo que estás adquiriendo es una excelente opción. Además, los
+        autos usados tienen menos depreciación, lo que significa que pierden
+        menos valor con el tiempo en comparación con los autos nuevos. Esto hace
+        que tu compra sea aún más rentable y beneficiosa.
       </p>
 
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam
-        beatae, repellat reprehenderit ad, accusamus qui quo nemo similique vel
-        quas dolores animi rerum temporibus? Aspernatur blanditiis eligendi
-        magnam aperiam dolorum!
-      </p>
     </main>
     <footer>
       <div class="contact-info">
@@ -61,6 +97,8 @@
           loading="lazy"
         ></iframe>
       </div>
+
+      <div class="footer">Todos los derechos reservados Alomah</div>
     </footer>
   </body>
 </html>
